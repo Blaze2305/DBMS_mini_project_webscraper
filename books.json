@@ -1,0 +1,78 @@
+[
+	{
+		"_id":"9781847045638",
+		"Name":"Digital Signal and Image Processing Using MATLAB",
+		"Author":"Gérard Blanchet, Maurice Charbit",
+		"Book Image":"",
+		"Description":"This title provides the most important theoretical aspects of Image and Signal Processing (ISP) for both deterministic and random signals. The theory is supported by exercises and computer simulations relating to real applications. More than 200 programs and functions are provided in the MATLAB® language, with useful comments and guidance, to enable numerical experiments to be carried out, thus allowing readers to develop a deeper understanding of both the theoretical and practical aspects of this subject.",
+		"Department":"ECE",
+		"Year":2,
+		"InStock":true,
+		"Stock":10
+	},
+	{
+		"_id":"9781105979125",
+		"Name":"Operating Systems: Three Easy Pieces",
+		"Author":"Remzi H. Arpaci-Dusseau, Andrea C. Arpaci-Dusseau",
+		"Book Image":"",
+		"Description":"A book about modern operating systems. Topics are broken down into three major conceptual pieces: Virtualization, Concurrency, and Persistence. Includes all major components of modern systems including scheduling, virtual memory management, disk subsystems and I/O, file systems, and even a short introduction to distributed systems.",
+		"Department":"CSE",
+		"Year":3,
+		"InStock":true,
+		"Stock":6
+	},
+	{
+		"_id":"9781593278267",
+		"Name":"Serious Cryptography: A Practical Introduction to Modern Encryption",
+		"Author":"Jean-Philippe Aumasson",
+		"Book Image":"",
+		"Description":"This practical guide to modern encryption breaks down the fundamental mathematical concepts at the heart of cryptography without shying away from meaty discussions of how they work. You’ll learn about authenticated encryption, secure randomness, hash functions, block ciphers, and public-key techniques such as RSA and elliptic curve cryptography.\nYou’ll also learn:\n- Key concepts in cryptography, such as computational security, attacker models, and forward secrecy\n- The strengths and limitations of the TLS protocol behind HTTPS secure websites\n- Quantum computation and post-quantum cryptography\n- About various vulnerabilities by examining numerous code examples and use cases\n- How to choose the best algorithm or protocol and ask vendors the right questions\nEach chapter includes a discussion of common implementation mistakes using real-world examples and details what could go wrong and how to avoid these pitfalls.\nWhether you’re a seasoned practitioner or a beginner looking to dive into the field, Serious Cryptography will provide a complete survey of modern encryption and its applications.",
+		"Department":"CSE",
+		"Year":4,
+		"InStock":false,
+		"Stock":0
+	},
+	{
+		"_id":"978-1138197015",
+		"Name":"Cryptography: Theory and Practice",
+		"Author":"Douglas R. Stinson, Maura B. Paterson",
+		"Book Image":"",
+		"Description":"Through three editions, Cryptography: Theory and Practice, has been embraced by instructors and students alike. It offers a comprehensive primer for the subject’s fundamentals while presenting the most current advances in cryptography.\nThe authors offer comprehensive, in-depth treatment of the methods and protocols that are vital to safeguarding the seemingly infinite and increasing amount of information circulating around the world.\n\nKey Features of the Fourth Edition:\n• New chapter on the exciting, emerging new area of post-quantum cryptography (Chapter 9).\n• New high-level, nontechnical overview of the goals and tools of cryptography (Chapter 1).\n• New mathematical appendix that summarizes definitions and main results on number theory and algebra (Appendix A).\n• An expanded treatment of stream ciphers, including common design techniques along with coverage of Trivium.\n• Interesting attacks on cryptosystems, including: padding oracle attack, correlation attacks and algebraic attacks on stream ciphers, attack on the DUAL-EC random bit generator that makes use of a trapdoor.\n• A treatment of the sponge construction for hash functions and its use in the new SHA-3 hash standard.\n• Methods of key distribution in sensor networks.\n• The basics of visual cryptography, allowing a secure method to split a secret visual message into pieces (shares) that can later be combined to reconstruct the secret.\n• The fundamental techniques cryptocurrencies, as used in Bitcoin and blockchain.\n• The basics of the new methods employed in messaging protocols such as Signal, including deniability and Diffie-Hellman key ratcheting.",
+		"Department":"CSE",
+		"Year":4,
+		"InStock":true,
+		"Stock":14
+	},
+	{
+		"_id":"978-0929306322",
+		"Name":"Data Structures, Algorithms, And Applications In C++",
+		"Author":"Sartaj Sahni",
+		"Book Image":"",
+		"Description":"This text provides students with an introduction to data structures and algorithms. It emphasizes algorithm analysis and the development of efficient code, and includes important background material. Divided into three parts, the text features Data Structure Application sections at the end of each chapter in part two, Algorithm Application sections in each design method chapter in part three, and a gradual development of C++ features not found in C to help students with either a background in C or C++ to comprehend topics in the book.",
+		"Department":"CSE",
+		"Year":2,
+		"InStock":true,
+		"Stock":23
+	},
+	{
+		"_id":"9781138592605",
+		"Name":"Advanced Data Structures: Theory and Applications",
+		"Author":"Suman Saha, Shailendra Shukla",
+		"Book Image":"",
+		"Department":"Advanced data structures is a core course in Computer Science which most graduate program in Computer Science, Computer Science and Engineering, and other allied engineering disciplines, offer during the first year or first semester of the curriculum. The objective of this course is to enable students to have the much-needed foundation for advanced technical skill, leading to better problem-solving in their respective disciplines. Although the course is running in almost all the technical universities for decades, major changes in the syllabus have been observed due to the recent paradigm shift of computation which is more focused on huge data and internet-based technologies. Majority of the institute has been redefined their course content of advanced data structure to fit the current need and course material heavily relies on research papers because of nonavailability of the redefined text book advanced data structure. To the best of our knowledge well-known textbook on advanced data structure provides only partial coverage of the syllabus.\n\nThe book offers comprehensive coverage of the most essential topics, including:\n\nPart I details advancements on basic data structures, viz., cuckoo hashing, skip list, tango tree and Fibonacci heaps and index files.\n\nPart II details data structures of different evolving data domains like special data structures, temporal data structures, external memory data structures, distributed and streaming data structures.\n\n\n\nPart III elucidates the applications of these data structures on different areas of computer science viz, network, www, DBMS, cryptography, graphics to name a few. The concepts and techniques behind each data structure and their applications have been explained.\n\nEvery chapter includes a variety of Illustrative Problems pertaining to the data structure(s) detailed, a summary of the technical content of the chapter and a list of Review Questions, to reinforce the comprehension of the concepts.\n\nThe book could be used both as an introductory or an advanced-level textbook for the advanced undergraduate, graduate and research programmes which offer advanced data structures as a core or an elective course. While the book is primarily meant to serve as a course material for use in the classroom, it could be used as a starting point for the beginner researcher of a specific domain.",
+		"Year":2,
+		"InStock":true,
+		"Stock":10
+	},
+	{
+		"_id":"978-1492040767",
+		"Name":"Cloud Native DevOps with Kubernetes",
+		"Author":"John Arundel, Justin Domingus",
+		"Book Image":"",
+		"Description":"Kubernetes is the operating system of the cloud-native world, providing a reliable and scalable platform for running containerized workloads. This book shows developers and operations staff how to apply industry-standard DevOps practices to Kubernetes in a cloud-native context. You’ll learn all about the Kubernetes ecosystem and discover battle-tested solutions to everyday problems.\nIn this friendly, pragmatic book, cloud experts John Arundel and Justin Domingus show you what Kubernetes can do—and what you can do with it. You’ll build, step by step, an example cloud-native application and its supporting infrastructure, along with a development environment and continuous deployment pipeline that you can use for your own applications.\n\n• Understand containers and Kubernetes from first principles—no experience necessary\n• Run your own clusters or choose a managed Kubernetes service from Amazon, Google, and others\n• Design your own cloud-native services and infrastructure\n• Use Kubernetes to manage resource usage and the container lifecycle\n• Optimize clusters for cost, performance, resilience, capacity, and scalability\n• Learn the best tools for developing, testing, and deploying your applications\n• Apply the latest industry practices for observability and monitoring\n• Secure your containers and clusters in production\n• Adopt DevOps principles to help make your development teams lean, fast, and effective",
+		"Department":"CSE",
+		"Year":4,
+		"InStock":true,
+		"Stock":3
+	}
+]
