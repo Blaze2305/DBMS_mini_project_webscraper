@@ -59,43 +59,79 @@ def removeDuplicateUrls(urls):
 	return urls
 
 
-
+# Generate the book data json
 def generateJSON(urls):
+	'''
+		Function to generate the BookData JSON which contains objects in the following structure
+			{
+				"Author": <str : Author Name>,
+				"Book Image": <str : URL to the book cover page>,
+				"Department": <str : Department name shorthand>,
+				"Description": <str : Description of the book>,
+				"InStock": <bool : Determines whether instock or not>,
+				"Name": <str : Name of the book>,
+				"Stock": <int : Number of books in stock>,
+				"Year": <int : Year for which the book is useful>,
+				"_id":<str : ID for the book can be either ISBN 13 | ISBN 10 | random 10 char string depending on whats available in that priority> 
+			}
+		This function works so far, its made for the z-lib indian mirror : 1lib.in . But if the number of books given is too high (more than 250 ish i guesss)
+		z-lib will block futher requests for ~24 hours due to too many requests.
+
+		params:
+			urls : <List(dict)> List of url objects containing
+							{
+								url : <str>,
+								year : <int>,
+								[dept] : <str>
+							}
+		returns:
+			<List(dict)> The scrapped book data
+	'''
+	# array to store all book data
 	books = []
+
+	# iterate through all the urls
 	for urlItem in urls:
+		# very crude try catch; might need to split it down to smaller more localized try catches but not rn
 		try:
+			# get the books url
 			url = urlItem['url']
+			# send a get request and fetch the HTML data
 			bookHtml = get(url)
+			# parse the HTML data
 			bookDataSoup = BeautifulSoup(bookHtml.text,"html.parser")
-
+			# go to the outermost container which has the book data
 			bookDataContainer = bookDataSoup.body.table.tbody.find("div",class_="container").div.div.find(itemscope=True)
-
+			# get image href
 			imageDiv = bookDataContainer.find("div",class_="details-book-cover-container").a.img.attrs['src']
-
+			# this contains the text data
 			bookDataDiv = bookDataContainer.find("div",class_="col-sm-9")
+			# get the book title
 			bookTitle  = bookDataDiv.h1.text.strip()
-
+			# get the author names
 			authorDiv = bookDataDiv.i.getText(" ")
-
+			# get the ISBN 13 for the book
 			isbnDiv = bookDataDiv.find("div",class_=["property_isbn","13"])
 			if not isbnDiv:
+				# If ISB 13 isnt available , we get the ISBN 10 for the book
 				isbnDiv = bookDataDiv.find("div",class_=["property_isbn","10"])
-			
+			# if ISBN 10 isnt available we just randomly generate the ID using a SHA256 hash of the author names
 			if not isbnDiv:
 				isbnValue = str(sha256(authorDiv.encode()).hexdigest()).replace("-","")[:10]
 			else:
+				# set the ISB 13 \ 10 value
 				isbnValue = isbnDiv.find("div",class_="property_value").text
-
+			# get the book description
 			bookDescriptionData = bookDataDiv.find("div",{"id":"bookDescriptionBox"}).getText("\n")
-
+			# if we've hardcoded a dept we use that else, we fetch the dept from the HTML
 			if "dept" not in urlItem:
 				categoryDiv = bookDataDiv.find("div",class_="property_categories").find("div",class_="property_value").getText(" ").strip()
 				category = getDepartment(categoryDiv)
 			else:
 				category = urlItem['dept']
-
+			# randomly generate amount of books
 			stock = randint(-10,30)
-
+			# Create the book dict
 			books.append({
 				"_id":isbnValue.strip(),
 				"Description":bookDescriptionData.strip(),
