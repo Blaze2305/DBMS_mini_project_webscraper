@@ -103,7 +103,7 @@ def generateJSON(urls):
 			# go to the outermost container which has the book data
 			bookDataContainer = bookDataSoup.body.table.tbody.find("div",class_="container").div.div.find(itemscope=True)
 			# get image href
-			imageDiv = bookDataContainer.find("div",class_="details-book-cover-container").a.img.attrs['src']
+			imageDiv = bookDataContainer.find("div",class_="details-book-cover-container").a.attrs['href']
 			# this contains the text data
 			bookDataDiv = bookDataContainer.find("div",class_="col-sm-9")
 			# get the book title
