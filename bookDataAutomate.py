@@ -65,7 +65,7 @@ def generateJSON(urls):
 		Function to generate the BookData JSON which contains objects in the following structure
 			{
 				"Author": <str : Author Name>,
-				"Book Image": <str : URL to the book cover page>,
+				"ImageUrl": <str : URL to the book cover page>,
 				"Department": <str : Department name shorthand>,
 				"Description": <str : Description of the book>,
 				"InStock": <bool : Determines whether instock or not>,
@@ -140,7 +140,7 @@ def generateJSON(urls):
 				"Stock":stock if stock>0 else 0,
 				"InStock":True if stock>0 else False,
 				"Department":category,
-				"Book Image":imageDiv,
+				"ImageUrl":imageDiv,
 				"Name":bookTitle
 			})
 			print(bookTitle)
